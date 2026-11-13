@@ -29,6 +29,7 @@ public class Customer {
 
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     private List<CustomerOrder> customerOrders;
+
     @PrePersist
     protected void onCreate() {
         LocalDateTime now = LocalDateTime.now();
